@@ -1,21 +1,21 @@
-# ThinkStats2
+# ThinkStats2 Notebook
 Sample codes for thinkstats2 by @myuuuuun  
-Web: [Thinkstats2 - Allen B. Downey](http://greenteapress.com/thinkstats2/)
-  
+ThinkStats2の学習記録です。  
+
+[Thinkstats2 - Allen B. Downey](http://greenteapress.com/thinkstats2/)  
 
 # Sample Codes  
 
 ###Chap1
 
 Exerciseのサンプルコードは[ch1.py](https://github.com/myuuuuun/ThinkStats2/blob/master/ch1.py), 
-[chap01ex.py](https://github.com/myuuuuun/ThinkStats2/blob/master/chap01ex.py)の2つです。  
-Codebookの集計結果と比較できるよう、整形したデータを出力するようにしてあります。
+[custom_functions.py](https://github.com/myuuuuun/ThinkStats2/blob/master/chap01ex.py)の2つです。  
+Codebookの集計結果と比較するため、整形したデータを出力するようにしてあります（以下のChapterも同様）。
 
 ###Chap2
 
 Exerciseのサンプルコードは[ch2.py](https://github.com/myuuuuun/ThinkStats2/blob/master/ch2.py)です。  
-一部[chap01ex.py](https://github.com/myuuuuun/ThinkStats2/blob/master/chap01ex.py)で定義された関数を使用しています。  
-Codebookの集計結果と比較できるよう、整形したデータを出力するようにしてあります。
+一部[custom_functions.py](https://github.com/myuuuuun/ThinkStats2/blob/master/chap01ex.py)で定義された関数を使用しています。  
 
 ###Chap3以下
 
