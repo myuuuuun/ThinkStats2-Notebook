@@ -10,15 +10,18 @@ ThinkStats2の学習記録です。
 
 [ipython notebook上での実行結果](https://github.com/myuuuuun/ThinkStats2-Notebook/blob/master/ch1.ipynb)
 
-
 Exerciseのサンプルコードは[ch1.py](https://github.com/myuuuuun/ThinkStats2-Notebook/blob/master/ch1.py), 
 [custom_functions.py](https://github.com/myuuuuun/ThinkStats2-Notebook/blob/master/custom_functions.py)の2つです。  
 Codebookの集計結果と比較するため、整形したデータを出力するようにしてあります（以下のChapterも同様）。
 
+
 ###Chap2
+
+[ipython notebook上での実行結果](https://github.com/myuuuuun/ThinkStats2-Notebook/blob/master/ch2.ipynb)
 
 Exerciseのサンプルコードは[ch2.py](https://github.com/myuuuuun/ThinkStats2-Notebook/blob/master/ch2.py)です。  
 一部[custom_functions.py](https://github.com/myuuuuun/ThinkStats2-Notebook/blob/master/custom_functions.py)で定義された関数を使用しています。  
+
 
 ###Chap3以下
 

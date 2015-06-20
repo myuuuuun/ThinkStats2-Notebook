@@ -1,46 +1,22 @@
 #!/usr/bin/python
 #-*- encoding: utf-8 -*-
-# Sample codes for ThinkStats2 by @myuuuuun
-# pandas tutorial: http://pandas.pydata.org/pandas-docs/stable/tutorials.html
+"""
+Sample Codes for ThinkStats2 - Chapter2
+
+Copyright 2015 @myuuuuun
+URL: https://github.com/myuuuuun/ThinkStats2-Notebook
+License: GNU GPLv3 http://www.gnu.org/licenses/gpl.html
+"""
 
 import sys
-import math
 sys.path.append('./code')
 import pandas as pd
 import nsfg
+import custom_functions as cf
+import sys
+import math
 import thinkstats2
 import thinkplot
-import chap01ex as ex1
-
-
-# Show All Rows
-def printf(rows):
-    pd.set_option('display.max_rows', len(rows))
-    print(rows)
-    pd.reset_option('display.max_rows')
-
-
-# Usage of printf
-    # printf(df.birthord)     # print all rows
-    # printf(pregord[0:400])  # you can use slices
-
-
-# Show All Columns
-def printf_c(cols):
-    pd.set_option('display.max_columns', cols.shape[1])
-    pd.set_option('display.width', 200)
-    print(cols)
-    pd.reset_option('display.max_columns')
-    pd.reset_option('display.width')
-
-
-def show_info_df(DataFrame):
-    print("行数: {0}, 列数: {1}\n".format(DataFrame.shape[0], DataFrame.shape[1]))
-    print(DataFrame.info())
-    print("\n\n\n# 基本統計量 + 先頭5行\n")
-    describe = DataFrame.describe()
-    head = DataFrame.head()
-    printf_c(describe.append(head))
 
 
 # Cohenのdを求める
@@ -58,7 +34,7 @@ def CohenEffectSize(g1, g2):
 
 # 回答者の年齢をヒストグラムで表示する
 def ex2pr1():
-    df = ex1.ReadFemResp()
+    df = cf.ReadFemResp()
     #print(df.age_r.value_counts().sort_index())  #年齢の頻度を表示（年齢順）
     #print(df.age_r.value_counts())  #年齢の頻度を表示（頻度順）
     hist = thinkstats2.Hist(df.age_r, label='age_r')
@@ -71,7 +47,7 @@ def ex2pr1():
 
 # 回答者の家族人数をヒストグラムで表示する
 def ex2pr2():
-    df = ex1.ReadFemResp()
+    df = cf.ReadFemResp()
     #print(df.numfmhh.value_counts().sort_index())  #家族人数の頻度を表示（家族の人数順）
     #print(df.numfmhh.value_counts())  #家族人数の頻度を表示（頻度順）
     hist = thinkstats2.Hist(df.numfmhh, label='anumfmhh')
@@ -84,7 +60,7 @@ def ex2pr2():
 
 # 出産した子供の人数をヒストグラムで表示する
 def ex2pr3():
-    df = ex1.ReadFemResp()
+    df = cf.ReadFemResp()
     #print(df.parity.value_counts().sort_index())  #出産人数の頻度を表示（家族人数順）。22や16はエラーとみなせるかもしれない。
     #print(df.parity.value_counts())  #出産人数の頻度を表示（頻度順）
     hist = thinkstats2.Hist(df.parity, label='parity')
@@ -97,7 +73,7 @@ def ex2pr3():
 
 # 出産人数上位n件を表示する
 def ex2pr4():
-    df = ex1.ReadFemResp()
+    df = cf.ReadFemResp()
     #print(df.parity.value_counts().sort_index())  #出産人数の頻度を表示（家族人数順）。22や16はエラーとみなせるかもしれない。
     #print(df.parity.value_counts())  #出産人数の頻度を表示（頻度順）
     hist = thinkstats2.Hist(df.parity)
@@ -111,7 +87,7 @@ def ex2pr4():
 # totincrの詳細: http://www.icpsr.umich.edu/nsfg6/Controller?displayPage=labelDetails&fileCode=MALE&section=R&subSec=7958&srtLabel=609776
 # 収入75000$以上の人（totincr = 14の人）をrich peopleとかんがえる。
 def ex2pr5():
-    df = ex1.ReadFemResp()
+    df = cf.ReadFemResp()
     rich = df[df.totincr == 14]
     #print(rich.parity.value_counts().sort_index())  #出産人数の頻度を表示（家族人数順）
     #print(rich.parity.value_counts())  #出産人数の頻度を表示（頻度順）
@@ -125,7 +101,7 @@ def ex2pr5():
 
 # 富裕層の出産人数上位n件を表示する
 def ex2pr6():
-    df = ex1.ReadFemResp()
+    df = cf.ReadFemResp()
     rich = df[df.totincr == 14]
     #print(rich.parity.value_counts().sort_index())  #出産人数の頻度を表示（家族人数順）
     #print(rich.parity.value_counts())  #出産人数の頻度を表示（頻度順）
@@ -138,7 +114,7 @@ def ex2pr6():
 
 # 富裕層とそれ以外の出産人数の平均を比較する
 def ex2pr7():
-    df = ex1.ReadFemResp()
+    df = cf.ReadFemResp()
     rich = df[df.totincr == 14]
     norich = df[df.totincr != 14]
     print("富裕層の平均出産人数: ", rich.parity.mean())
@@ -164,7 +140,7 @@ def AllModes(hist):
 
 
 def ex3():
-    df = ex1.ReadFemResp()
+    df = cf.ReadFemResp()
     hist = thinkstats2.Hist(df.parity)
     print(Mode(hist))
     print(AllModes(hist))
@@ -174,7 +150,7 @@ def ex3():
 
 
 # Exercise2.4
-# Histオブジェクトを引数に取り、最頻値を返す関数
+# 一番目の赤ちゃんは他の子どもよりも軽いか重いかを調べる
 def ex4():
     df = nsfg.ReadFemPreg()
     first = df[df.birthord == 1]
@@ -188,8 +164,6 @@ def ex4():
 
 
 #ex4()
-
-
 
 
 
