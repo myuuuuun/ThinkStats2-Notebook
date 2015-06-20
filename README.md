@@ -3,21 +3,22 @@ ThinkStats2の学習記録です。
 
 [Thinkstats2 - Allen B. Downey](http://greenteapress.com/thinkstats2/)  
 
-## 各Chapterの内容、およびExerciseのサンプルコード
+## 各Chapterの内容およびExerciseのサンプルコード
 
 ###Chapter1
+
+* chap1ex.py: [ipython notebook上での実行結果](https://github.com/myuuuuun/ThinkStats2-Notebook/blob/master/chap1ex.ipynb)
 
 Exerciseのサンプルコードは[chap1ex.py](https://github.com/myuuuuun/ThinkStats2-Notebook/blob/master/chap1ex.py), 
 [custom_functions.py](https://github.com/myuuuuun/ThinkStats2-Notebook/blob/master/custom_functions.py)の2つです。  
 Codebookの集計結果と比較するため、整形したデータを出力するようにしてあります（以下のChapterも同様）。
 
-* Exercise: [ipython notebook](https://github.com/myuuuuun/ThinkStats2-Notebook/blob/master/chap1ex.ipynb)
 
 ###Chapter2
 
-Exerciseのサンプルコードは[chap2ex.py](https://github.com/myuuuuun/ThinkStats2-Notebook/blob/master/chap2ex.py)です。一部 [custom_functions.py](https://github.com/myuuuuun/ThinkStats2-Notebook/blob/master/custom_functions.py) で定義された関数を使用しています。  
+* chap2ex.py: [ipython notebook上での実行結果](https://github.com/myuuuuun/ThinkStats2-Notebook/blob/master/chap2ex.ipynb)
 
-* Exercise: [ipython notebook](https://github.com/myuuuuun/ThinkStats2-Notebook/blob/master/chap2ex.ipynb)
+Exerciseのサンプルコードは[chap2ex.py](https://github.com/myuuuuun/ThinkStats2-Notebook/blob/master/chap2ex.py)です。一部 [custom_functions.py](https://github.com/myuuuuun/ThinkStats2-Notebook/blob/master/custom_functions.py) で定義された関数を使用しています。  
 
 ###Chapter3以下
 
