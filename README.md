@@ -20,7 +20,15 @@ Codebookの集計結果と比較するため、整形したデータを出力す
 
 Exerciseのサンプルコードは[chap2ex.py](https://github.com/myuuuuun/ThinkStats2-Notebook/blob/master/chap2ex.py)です。一部 [custom_functions.py](https://github.com/myuuuuun/ThinkStats2-Notebook/blob/master/custom_functions.py) で定義された関数を使用しています。  
 
-###Chapter3以下
+
+###Chapter3
+
+* chap3.ipynb: [ipython notebook上での実行結果](https://github.com/myuuuuun/ThinkStats2-Notebook/blob/master/chap3.ipynb)
+
+Chapterの内容のノートは[chap3.py](https://github.com/myuuuuun/ThinkStats2-Notebook/blob/master/chap3.py)です。
+
+
+###Chapter4以下
 
 作成中
 
