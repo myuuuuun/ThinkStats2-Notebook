@@ -25,7 +25,7 @@ Exerciseのサンプルコードは[chap2ex.py](https://github.com/myuuuuun/Thin
 
 * chap3.ipynb: [ipython notebook上での実行結果](https://github.com/myuuuuun/ThinkStats2-Notebook/blob/master/chap3.ipynb)
 
-Chapterの内容のノートは[chap3.py](https://github.com/myuuuuun/ThinkStats2-Notebook/blob/master/chap3.py)です。
+Chapterの内容のノートは[chap3.ipynb](https://github.com/myuuuuun/ThinkStats2-Notebook/blob/master/chap3.ipynb)です（コード単体は無し）。
 
 
 ###Chapter4以下
