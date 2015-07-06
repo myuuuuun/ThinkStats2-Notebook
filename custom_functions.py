@@ -10,6 +10,7 @@ License: GNU GPLv3 http://www.gnu.org/licenses/gpl.html
 
 from __future__ import print_function
 from collections import defaultdict
+import math
 import numpy as np
 import pandas as pd
 import sys
@@ -71,6 +72,19 @@ def MakeRespMap(df):
     d = defaultdict(list)
     for index, caseid in df.caseid.iteritems():
         d[caseid].append(index)
+    return d
+
+
+# Cohenのdを求める
+def CohenEffectSize(g1, g2):
+    diff = g1.mean() - g2.mean()
+    var1 = g1.var()
+    var2 = g2.var()
+    n1 = len(g1)
+    n2 = len(g2)
+
+    pooled_var = (n1 * var1 + n2 * var2) / (n1 + n2)
+    d = diff / math.sqrt(pooled_var)
     return d
 
 

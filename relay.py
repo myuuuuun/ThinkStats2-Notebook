@@ -1,12 +1,14 @@
-"""This file contains code used in "Think Stats",
+"""
+This file contains code used in "Think Stats",
 by Allen B. Downey, available from greenteapress.com
 
 Copyright 2014 Allen B. Downey
 License: GNU GPLv3 http://www.gnu.org/licenses/gpl.html
+
+changed a little by @myuuuuun
 """
 
 from __future__ import print_function, division
-
 import numpy as np
 import thinkplot
 import thinkstats2
@@ -81,19 +83,15 @@ def BinData(data, low, high, n):
     return data
 
 
-def main():
+def pmf():
     results = ReadResults()
     speeds = GetSpeeds(results)
-
     speeds = BinData(speeds, 3, 12, 100)
-
     pmf = thinkstats2.Pmf(speeds, 'speeds')
 
     thinkplot.Pmf(pmf)
-    thinkplot.Show(title='PMF of running speed',
-                   xlabel='speed (mph)',
-                   ylabel='probability')
+
+    return pmf
 
 
-if __name__ == '__main__':
-    main()
+
