@@ -70,7 +70,12 @@ print("Biased average: ", PmfMean(biased_pmf))
 def PmfVar(pmf):
     pmf.Normalize()
     average = PmfMean(pmf)
-    variance = sum([prob * pow(value - average, 2) for value, prob in pmf.Items()])
+    # これは効率が悪い
+    #variance = sum([prob * pow(value - average, 2) for value, prob in pmf.Items()])
+
+    # こっちの方がいい
+    # Var(x) = E[x^2] - (E[x])^2 を利用
+    variance = sum([prob * pow(value, 2)]) - pow(average, 2)
     return variance
 
 
